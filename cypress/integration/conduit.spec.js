@@ -4,13 +4,13 @@ describe('the conduit application', () => {
     cy.get('.article-preview').should('have.length', 10)
   })
 
- /* it('shows the first post', () => {
+  it('shows the first post', () => {
       cy.server()
       // we set the response to be the activites.json fixture
       cy.route('GET', '/api/articles*', 'fixture:posts.json')
       cy.visit('/')
-      cy.get(':nth-child(1) > .article-preview').contains('test-moh')
-  })*/
+      cy.get(':nth-child(1) > .article-preview').contains('API Injected Data')
+  })
 
   it('should handle an empty database', () => {
       cy.server()
