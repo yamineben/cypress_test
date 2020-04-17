@@ -9,7 +9,7 @@ describe('the conduit application', () => {
       // we set the response to be the activites.json fixture
       cy.route('GET', '/api/articles*', 'fixture:posts.json')
       cy.visit('/')
-      cy.get(':nth-child(1) > .article-preview').contains('API Injected Data')
+      cy.get(':nth-child(1) > .article-preview').contains('test-moh')
   })
 
   it('should handle an empty database', () => {
